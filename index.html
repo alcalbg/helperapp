@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="./manifest.json">
+    <script src="jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <a href="#" class="play">
+        <img src="driving.jpg">
+        <audio class="audio" src="driving.mp3"></audio>
+      </a>
+
+      <a href="#" class="play">
+        <img src="sandwich.jpg">
+        <audio class="audio" src="sandwich.mp3"></audio>
+      </a>
+
+      <a href="#" class="play">
+        <img src="outside.jpg">
+        <audio class="audio" src="outside.mp3"></audio>
+      </a>
+
+    </div>
+  </body>
+  <script>
+    $(document).ready(function(){
+          $("img").css('width','450');
+
+          $(".play").click(function(){
+                $(this).find("audio")[0].play();
+              });
+        });
+  </script>
+
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js') }</script>
+</html>
